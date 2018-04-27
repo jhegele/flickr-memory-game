@@ -25,3 +25,12 @@ This is partially me exploring JS a little more and partially trying to entertai
 ## Other Info
 
 * By default, Flickr's Safe Search is enabled. Since this was created for a kid, there is no interface option to change this. If you want to disable Safe Search, you'll need to modify the `flickr.py` file to remove the `safe_search` param.
+
+## Heroku Deploy
+
+These are mostly notes for me, since I'll never remember the details of deploying a Docker image to Heroku.
+
+1) Login using the Heroku CLI: `heroku login`
+2) Login to the Heroku Container Registry: `heroku container:login`
+3) Set the environment var for the Heroku app: `heroku config:set FLICKR_MEMORY_GAME=<API KEY HERE>`
+4) Deploy the Docker container: `heroku container:push web`
